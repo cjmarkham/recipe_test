@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node --import tsx/esm --env-file .env src/index.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "evaluations": "node --import tsx/esm --env-file .env test/evaluations.ts"
   },
   "type": "module",
   "keywords": [],
@@ -21,6 +21,7 @@
     "@types/express": "^5.0.6",
     "@types/node": "^14.14.14",
     "@types/pg": "^8.23.1",
-    "tsx": "^4.23.15"
+    "tsx": "^4.23.15",
+    "vitest": "^5.1.1"
   }
 }

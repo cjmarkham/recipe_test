@@ -1,0 +1,788 @@
+[
+  {
+    "id": "meal-001",
+    "category": "basic",
+    "input": "I want a chicken dinner under 600 calories with at least 40g of protein",
+    "expected": {
+      "mealType": "dinner",
+      "ingredients": [
+        "chicken"
+      ],
+      "maxCalories": 600,
+      "minProtein": 40
+    }
+  },
+  {
+    "id": "meal-002",
+    "category": "basic",
+    "input": "Find me a lunch with tuna, no more than 450 calories and 30g protein minimum",
+    "expected": {
+      "mealType": "lunch",
+      "ingredients": [
+        "tuna"
+      ],
+      "maxCalories": 450,
+      "minProtein": 30
+    }
+  },
+  {
+    "id": "meal-003",
+    "category": "basic",
+    "input": "Give me a breakfast with eggs and bread under 500 calories",
+    "expected": {
+      "mealType": "breakfast",
+      "ingredients": [
+        "eggs",
+        "bread"
+      ],
+      "maxCalories": 500,
+      "minProtein": null
+    }
+  },
+  {
+    "id": "meal-004",
+    "category": "basic",
+    "input": "I need a snack with yoghurt under 250 calories",
+    "expected": {
+      "mealType": "snack",
+      "ingredients": [
+        "yoghurt"
+      ],
+      "maxCalories": 250,
+      "minProtein": null
+    }
+  },
+  {
+    "id": "meal-005",
+    "category": "basic",
+    "input": "For dinner, find something with beef and rice and at least 35 grams of protein",
+    "expected": {
+      "mealType": "dinner",
+      "ingredients": [
+        "beef",
+        "rice"
+      ],
+      "maxCalories": null,
+      "minProtein": 35
+    }
+  },
+  {
+    "id": "meal-006",
+    "category": "basic",
+    "input": "Lunch containing salmon, maximum 550 calories",
+    "expected": {
+      "mealType": "lunch",
+      "ingredients": [
+        "salmon"
+      ],
+      "maxCalories": 550,
+      "minProtein": null
+    }
+  },
+  {
+    "id": "meal-007",
+    "category": "basic",
+    "input": "Breakfast with oats and banana that has at least 20g protein",
+    "expected": {
+      "mealType": "breakfast",
+      "ingredients": [
+        "oats",
+        "banana"
+      ],
+      "maxCalories": null,
+      "minProtein": 20
+    }
+  },
+  {
+    "id": "meal-008",
+    "category": "paraphrase",
+    "input": "A tofu dinner with fewer than 500 calories and 25g or more protein",
+    "expected": {
+      "mealType": "dinner",
+      "ingredients": [
+        "tofu"
+      ],
+      "maxCalories": 500,
+      "minProtein": 25
+    }
+  },
+  {
+    "id": "meal-009",
+    "category": "shorthand",
+    "input": "Chicken lunch, 600 cals max, 25g protein min",
+    "expected": {
+      "mealType": "lunch",
+      "ingredients": [
+        "chicken"
+      ],
+      "maxCalories": 600,
+      "minProtein": 25
+    }
+  },
+  {
+    "id": "meal-010",
+    "category": "shorthand",
+    "input": "Dinner: rice, broccoli; <= 450 kcal; >= 15g protein",
+    "expected": {
+      "mealType": "dinner",
+      "ingredients": [
+        "rice",
+        "broccoli"
+      ],
+      "maxCalories": 450,
+      "minProtein": 15
+    }
+  },
+  {
+    "id": "meal-011",
+    "category": "shorthand",
+    "input": "Breakfast: eggs, spinach. 350 kcal ceiling. Protein floor 20g.",
+    "expected": {
+      "mealType": "breakfast",
+      "ingredients": [
+        "eggs",
+        "spinach"
+      ],
+      "maxCalories": 350,
+      "minProtein": 20
+    }
+  },
+  {
+    "id": "meal-012",
+    "category": "shorthand",
+    "input": "Snack - peanut butter and banana - no higher than 400 kcal",
+    "expected": {
+      "mealType": "snack",
+      "ingredients": [
+        "peanut butter",
+        "banana"
+      ],
+      "maxCalories": 400,
+      "minProtein": null
+    }
+  },
+  {
+    "id": "meal-013",
+    "category": "paraphrase",
+    "input": "I fancy prawns for dinner. Keep it to 480 calories at most.",
+    "expected": {
+      "mealType": "dinner",
+      "ingredients": [
+        "prawns"
+      ],
+      "maxCalories": 480,
+      "minProtein": null
+    }
+  },
+  {
+    "id": "meal-014",
+    "category": "paraphrase",
+    "input": "Could you suggest a lunch featuring chickpeas with a minimum of 18 grams protein?",
+    "expected": {
+      "mealType": "lunch",
+      "ingredients": [
+        "chickpeas"
+      ],
+      "maxCalories": null,
+      "minProtein": 18
+    }
+  },
+  {
+    "id": "meal-015",
+    "category": "paraphrase",
+    "input": "Breakfast using milk and oats; cap calories at 450.",
+    "expected": {
+      "mealType": "breakfast",
+      "ingredients": [
+        "milk",
+        "oats"
+      ],
+      "maxCalories": 450,
+      "minProtein": null
+    }
+  },
+  {
+    "id": "meal-016",
+    "category": "context",
+    "input": "I have 700 calories available for dinner. I want chicken and potatoes.",
+    "expected": {
+      "mealType": "dinner",
+      "ingredients": [
+        "chicken",
+        "potatoes"
+      ],
+      "maxCalories": 700,
+      "minProtein": null
+    }
+  },
+  {
+    "id": "meal-017",
+    "category": "paraphrase",
+    "input": "My lunch needs to contain tuna and have at least 35 grams of protein.",
+    "expected": {
+      "mealType": "lunch",
+      "ingredients": [
+        "tuna"
+      ],
+      "maxCalories": null,
+      "minProtein": 35
+    }
+  },
+  {
+    "id": "meal-018",
+    "category": "paraphrase",
+    "input": "Can I get a dinner with lentils and tomatoes that comes in below 600 kcal?",
+    "expected": {
+      "mealType": "dinner",
+      "ingredients": [
+        "lentils",
+        "tomatoes"
+      ],
+      "maxCalories": 600,
+      "minProtein": null
+    }
+  },
+  {
+    "id": "meal-019",
+    "category": "paraphrase",
+    "input": "Looking for a snack with strawberries and yoghurt, 200 calories or less.",
+    "expected": {
+      "mealType": "snack",
+      "ingredients": [
+        "strawberries",
+        "yoghurt"
+      ],
+      "maxCalories": 200,
+      "minProtein": null
+    }
+  },
+  {
+    "id": "meal-020",
+    "category": "paraphrase",
+    "input": "I want turkey and pasta for dinner, aiming for at least 45g protein.",
+    "expected": {
+      "mealType": "dinner",
+      "ingredients": [
+        "turkey",
+        "pasta"
+      ],
+      "maxCalories": null,
+      "minProtein": 45
+    }
+  },
+  {
+    "id": "meal-021",
+    "category": "missing",
+    "input": "For lunch, I want something with chicken.",
+    "expected": {
+      "mealType": "lunch",
+      "ingredients": [
+        "chicken"
+      ],
+      "maxCalories": null,
+      "minProtein": null
+    }
+  },
+  {
+    "id": "meal-022",
+    "category": "missing",
+    "input": "Please suggest a dinner with rice.",
+    "expected": {
+      "mealType": "dinner",
+      "ingredients": [
+        "rice"
+      ],
+      "maxCalories": null,
+      "minProtein": null
+    }
+  },
+  {
+    "id": "meal-023",
+    "category": "missing",
+    "input": "Something with eggs for breakfast.",
+    "expected": {
+      "mealType": "breakfast",
+      "ingredients": [
+        "eggs"
+      ],
+      "maxCalories": null,
+      "minProtein": null
+    }
+  },
+  {
+    "id": "meal-024",
+    "category": "missing",
+    "input": "Snack idea involving blueberries.",
+    "expected": {
+      "mealType": "snack",
+      "ingredients": [
+        "blueberries"
+      ],
+      "maxCalories": null,
+      "minProtein": null
+    }
+  },
+  {
+    "id": "meal-025",
+    "category": "missing",
+    "input": "A dinner under 500 calories, please.",
+    "expected": {
+      "mealType": "dinner",
+      "ingredients": [],
+      "maxCalories": 500,
+      "minProtein": null
+    }
+  },
+  {
+    "id": "meal-026",
+    "category": "missing",
+    "input": "At least 30g of protein for lunch, please.",
+    "expected": {
+      "mealType": "lunch",
+      "ingredients": [],
+      "maxCalories": null,
+      "minProtein": 30
+    }
+  },
+  {
+    "id": "meal-027",
+    "category": "missing",
+    "input": "Breakfast below 350 calories and over 15g protein.",
+    "expected": {
+      "mealType": "breakfast",
+      "ingredients": [],
+      "maxCalories": 350,
+      "minProtein": 15
+    }
+  },
+  {
+    "id": "meal-028",
+    "category": "missing",
+    "input": "A snack with 10 grams of protein minimum.",
+    "expected": {
+      "mealType": "snack",
+      "ingredients": [],
+      "maxCalories": null,
+      "minProtein": 10
+    }
+  },
+  {
+    "id": "meal-029",
+    "category": "missing",
+    "input": "Just show me dinner options.",
+    "expected": {
+      "mealType": "dinner",
+      "ingredients": [],
+      "maxCalories": null,
+      "minProtein": null
+    }
+  },
+  {
+    "id": "meal-030",
+    "category": "missing",
+    "input": "Any lunch suggestions?",
+    "expected": {
+      "mealType": "lunch",
+      "ingredients": [],
+      "maxCalories": null,
+      "minProtein": null
+    }
+  },
+  {
+    "id": "meal-031",
+    "category": "vague",
+    "input": "I want a high-protein chicken lunch.",
+    "expected": {
+      "mealType": "lunch",
+      "ingredients": [
+        "chicken"
+      ],
+      "maxCalories": null,
+      "minProtein": null
+    }
+  },
+  {
+    "id": "meal-032",
+    "category": "vague",
+    "input": "Find a low-calorie dinner with broccoli.",
+    "expected": {
+      "mealType": "dinner",
+      "ingredients": [
+        "broccoli"
+      ],
+      "maxCalories": null,
+      "minProtein": null
+    }
+  },
+  {
+    "id": "meal-033",
+    "category": "vague",
+    "input": "A filling breakfast with oats and berries.",
+    "expected": {
+      "mealType": "breakfast",
+      "ingredients": [
+        "oats",
+        "berries"
+      ],
+      "maxCalories": null,
+      "minProtein": null
+    }
+  },
+  {
+    "id": "meal-034",
+    "category": "vague",
+    "input": "Suggest a light snack with banana.",
+    "expected": {
+      "mealType": "snack",
+      "ingredients": [
+        "banana"
+      ],
+      "maxCalories": null,
+      "minProtein": null
+    }
+  },
+  {
+    "id": "meal-035",
+    "category": "vague",
+    "input": "A healthy salmon dinner, please.",
+    "expected": {
+      "mealType": "dinner",
+      "ingredients": [
+        "salmon"
+      ],
+      "maxCalories": null,
+      "minProtein": null
+    }
+  },
+  {
+    "id": "meal-036",
+    "category": "approximate",
+    "input": "I want dinner with cod, around 400 calories.",
+    "expected": {
+      "mealType": "dinner",
+      "ingredients": [
+        "cod"
+      ],
+      "maxCalories": null,
+      "minProtein": null
+    }
+  },
+  {
+    "id": "meal-037",
+    "category": "approximate",
+    "input": "For lunch, roughly 35g of protein, with chicken.",
+    "expected": {
+      "mealType": "lunch",
+      "ingredients": [
+        "chicken"
+      ],
+      "maxCalories": null,
+      "minProtein": null
+    }
+  },
+  {
+    "id": "meal-038",
+    "category": "approximate",
+    "input": "Breakfast with oats, ideally about 450 kcal.",
+    "expected": {
+      "mealType": "breakfast",
+      "ingredients": [
+        "oats"
+      ],
+      "maxCalories": null,
+      "minProtein": null
+    }
+  },
+  {
+    "id": "meal-039",
+    "category": "approximate",
+    "input": "Snack with yoghurt and approximately 20g protein.",
+    "expected": {
+      "mealType": "snack",
+      "ingredients": [
+        "yoghurt"
+      ],
+      "maxCalories": null,
+      "minProtein": null
+    }
+  },
+  {
+    "id": "meal-040",
+    "category": "ordering",
+    "input": "For dinner, 500 calories at most and at least 35g protein — make it salmon.",
+    "expected": {
+      "mealType": "dinner",
+      "ingredients": [
+        "salmon"
+      ],
+      "maxCalories": 500,
+      "minProtein": 35
+    }
+  },
+  {
+    "id": "meal-041",
+    "category": "ordering",
+    "input": "Could lunch be no more than 350 kcal and include tuna and lettuce?",
+    "expected": {
+      "mealType": "lunch",
+      "ingredients": [
+        "tuna",
+        "lettuce"
+      ],
+      "maxCalories": 350,
+      "minProtein": null
+    }
+  },
+  {
+    "id": "meal-042",
+    "category": "ordering",
+    "input": "At breakfast I need 30 grams of protein or more, with eggs and bread.",
+    "expected": {
+      "mealType": "breakfast",
+      "ingredients": [
+        "eggs",
+        "bread"
+      ],
+      "maxCalories": null,
+      "minProtein": 30
+    }
+  },
+  {
+    "id": "meal-043",
+    "category": "ordering",
+    "input": "For a snack, include banana, and do not go over 300 calories.",
+    "expected": {
+      "mealType": "snack",
+      "ingredients": [
+        "banana"
+      ],
+      "maxCalories": 300,
+      "minProtein": null
+    }
+  },
+  {
+    "id": "meal-044",
+    "category": "number_words",
+    "input": "Dinner with chicken, no more than six hundred calories and forty grams of protein minimum.",
+    "expected": {
+      "mealType": "dinner",
+      "ingredients": [
+        "chicken"
+      ],
+      "maxCalories": 600,
+      "minProtein": 40
+    }
+  },
+  {
+    "id": "meal-045",
+    "category": "number_words",
+    "input": "For breakfast, eggs and toast, under four hundred calories.",
+    "expected": {
+      "mealType": "breakfast",
+      "ingredients": [
+        "eggs",
+        "toast"
+      ],
+      "maxCalories": 400,
+      "minProtein": null
+    }
+  },
+  {
+    "id": "meal-046",
+    "category": "number_words",
+    "input": "Lunch with beef: at least thirty-five grams of protein.",
+    "expected": {
+      "mealType": "lunch",
+      "ingredients": [
+        "beef"
+      ],
+      "maxCalories": null,
+      "minProtein": 35
+    }
+  },
+  {
+    "id": "meal-047",
+    "category": "number_words",
+    "input": "I need a snack containing yoghurt below two hundred and fifty calories.",
+    "expected": {
+      "mealType": "snack",
+      "ingredients": [
+        "yoghurt"
+      ],
+      "maxCalories": 250,
+      "minProtein": null
+    }
+  },
+  {
+    "id": "meal-048",
+    "category": "units",
+    "input": "Dinner with chicken: max 600kcal; min 40g protein.",
+    "expected": {
+      "mealType": "dinner",
+      "ingredients": [
+        "chicken"
+      ],
+      "maxCalories": 600,
+      "minProtein": 40
+    }
+  },
+  {
+    "id": "meal-049",
+    "category": "units",
+    "input": "Lunch with rice: calories <= 450; protein >= 20 g.",
+    "expected": {
+      "mealType": "lunch",
+      "ingredients": [
+        "rice"
+      ],
+      "maxCalories": 450,
+      "minProtein": 20
+    }
+  },
+  {
+    "id": "meal-050",
+    "category": "units",
+    "input": "Breakfast with eggs: 500 kcal maximum.",
+    "expected": {
+      "mealType": "breakfast",
+      "ingredients": [
+        "eggs"
+      ],
+      "maxCalories": 500,
+      "minProtein": null
+    }
+  },
+  {
+    "id": "meal-051",
+    "category": "units",
+    "input": "A snack with nuts that has 15 g+ protein.",
+    "expected": {
+      "mealType": "snack",
+      "ingredients": [
+        "nuts"
+      ],
+      "maxCalories": null,
+      "minProtein": 15
+    }
+  },
+  {
+    "id": "meal-052",
+    "category": "distractor",
+    "input": "For dinner, include chicken and rice. I ate 300 calories at breakfast, but dinner should be under 650 calories.",
+    "expected": {
+      "mealType": "dinner",
+      "ingredients": [
+        "chicken",
+        "rice"
+      ],
+      "maxCalories": 650,
+      "minProtein": null
+    }
+  },
+  {
+    "id": "meal-053",
+    "category": "distractor",
+    "input": "Lunch with tuna and pasta, 500 calories maximum. My protein goal for the whole day is 120g.",
+    "expected": {
+      "mealType": "lunch",
+      "ingredients": [
+        "tuna",
+        "pasta"
+      ],
+      "maxCalories": 500,
+      "minProtein": null
+    }
+  },
+  {
+    "id": "meal-054",
+    "category": "distractor",
+    "input": "I had 40g of protein at breakfast. Now find a dinner with beef under 600 calories.",
+    "expected": {
+      "mealType": "dinner",
+      "ingredients": [
+        "beef"
+      ],
+      "maxCalories": 600,
+      "minProtein": null
+    }
+  },
+  {
+    "id": "meal-055",
+    "category": "distractor",
+    "input": "My partner had a 250-calorie snack. I want a lunch with tofu and at least 25g protein.",
+    "expected": {
+      "mealType": "lunch",
+      "ingredients": [
+        "tofu"
+      ],
+      "maxCalories": null,
+      "minProtein": 25
+    }
+  },
+  {
+    "id": "meal-056",
+    "category": "distractor",
+    "input": "For breakfast, I have 600 calories left in my daily budget, but I want this meal below 300 calories and to include oats.",
+    "expected": {
+      "mealType": "breakfast",
+      "ingredients": [
+        "oats"
+      ],
+      "maxCalories": 300,
+      "minProtein": null
+    }
+  },
+  {
+    "id": "meal-057",
+    "category": "boundaries",
+    "input": "I need a dinner with chicken and rice at or below 600 calories, and at or above 40g protein.",
+    "expected": {
+      "mealType": "dinner",
+      "ingredients": [
+        "chicken",
+        "rice"
+      ],
+      "maxCalories": 600,
+      "minProtein": 40
+    }
+  },
+  {
+    "id": "meal-058",
+    "category": "boundaries",
+    "input": "A lunch with salmon at most 500 calories and at least 30 grams protein.",
+    "expected": {
+      "mealType": "lunch",
+      "ingredients": [
+        "salmon"
+      ],
+      "maxCalories": 500,
+      "minProtein": 30
+    }
+  },
+  {
+    "id": "meal-059",
+    "category": "boundaries",
+    "input": "For breakfast, eggs: not above 400 calories, not below 20g protein.",
+    "expected": {
+      "mealType": "breakfast",
+      "ingredients": [
+        "eggs"
+      ],
+      "maxCalories": 400,
+      "minProtein": 20
+    }
+  },
+  {
+    "id": "meal-060",
+    "category": "boundaries",
+    "input": "Snack with yoghurt: protein no less than 15g, calories no more than 250.",
+    "expected": {
+      "mealType": "snack",
+      "ingredients": [
+        "yoghurt"
+      ],
+      "maxCalories": 250,
+      "minProtein": 15
+    }
+  }
+]

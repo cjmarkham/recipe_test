@@ -15,12 +15,24 @@ export const interpretRequest = async (dto: DTO): Promise<[z.infer<typeof MealQu
         {
           role: 'system', // Instructions
           content: `
-            You are a recipe assistant.
+            You are an information extraction component for a recipe search system.
             
-            Extract nutritional requirements from the user.
-            Only extract values explicitly mentioned.
-            Do not invent nutritional targets.
-            If a numeric value is missing, return null.
+            Extract:
+            - Ingredients: actual food items the user wants included
+              in the requested recipe.
+            - maxCalories: an explicitly stated upper calorie limit
+              for the requested recipe.
+            - minProtein: an explicitly stated lower protein limit
+              for the requested recipe.
+            
+            Only extract constraints that apply to the recipe
+            being requested, not background information.
+            
+            If a constraint is absent or cannot be represented
+            unambiguously, return null (or [] for ingredients).
+            
+            Do not infer numerical thresholds from qualitative
+            preferences.
           `,
         },
         {
@@ -32,6 +44,7 @@ export const interpretRequest = async (dto: DTO): Promise<[z.infer<typeof MealQu
       think: false, // disable reasoning for faster responses
       options: {
         num_predict: 150, // limit token usage
+        temperature: 0, // improve consistency
       },
       format: z.toJSONSchema(MealQuerySchema)
     })

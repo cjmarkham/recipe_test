@@ -1,8 +1,3 @@
-import { z } from 'zod'
-
-import { MealQuerySchema, OLLAMA_ENDPOINT } from './config'
-import { HttpError, httpError } from "./http";
-
 export interface DTO {
   query: string
 }

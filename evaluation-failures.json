@@ -1,0 +1,152 @@
+[
+  {
+    "id": "meal-032",
+    "category": "vague",
+    "input": "Find a low-calorie dinner with broccoli.",
+    "expected": {
+      "mealType": "dinner",
+      "ingredients": [
+        "broccoli"
+      ],
+      "maxCalories": null,
+      "minProtein": null
+    },
+    "actual": {
+      "ingredients": [
+        "broccoli"
+      ],
+      "maxCalories": 300,
+      "minProtein": null
+    },
+    "fields": {
+      "ingredients": true,
+      "maxCalories": false,
+      "minProtein": true
+    }
+  },
+  {
+    "id": "meal-036",
+    "category": "approximate",
+    "input": "I want dinner with cod, around 400 calories.",
+    "expected": {
+      "mealType": "dinner",
+      "ingredients": [
+        "cod"
+      ],
+      "maxCalories": null,
+      "minProtein": null
+    },
+    "actual": {
+      "ingredients": [
+        "cod"
+      ],
+      "maxCalories": 400,
+      "minProtein": null
+    },
+    "fields": {
+      "ingredients": true,
+      "maxCalories": false,
+      "minProtein": true
+    }
+  },
+  {
+    "id": "meal-037",
+    "category": "approximate",
+    "input": "For lunch, roughly 35g of protein, with chicken.",
+    "expected": {
+      "mealType": "lunch",
+      "ingredients": [
+        "chicken"
+      ],
+      "maxCalories": null,
+      "minProtein": null
+    },
+    "actual": {
+      "ingredients": [
+        "chicken"
+      ],
+      "maxCalories": null,
+      "minProtein": 35
+    },
+    "fields": {
+      "ingredients": true,
+      "maxCalories": true,
+      "minProtein": false
+    }
+  },
+  {
+    "id": "meal-038",
+    "category": "approximate",
+    "input": "Breakfast with oats, ideally about 450 kcal.",
+    "expected": {
+      "mealType": "breakfast",
+      "ingredients": [
+        "oats"
+      ],
+      "maxCalories": null,
+      "minProtein": null
+    },
+    "actual": {
+      "ingredients": [
+        "oats"
+      ],
+      "maxCalories": 450,
+      "minProtein": null
+    },
+    "fields": {
+      "ingredients": true,
+      "maxCalories": false,
+      "minProtein": true
+    }
+  },
+  {
+    "id": "meal-039",
+    "category": "approximate",
+    "input": "Snack with yoghurt and approximately 20g protein.",
+    "expected": {
+      "mealType": "snack",
+      "ingredients": [
+        "yoghurt"
+      ],
+      "maxCalories": null,
+      "minProtein": null
+    },
+    "actual": {
+      "ingredients": [
+        "yoghurt"
+      ],
+      "maxCalories": null,
+      "minProtein": 20
+    },
+    "fields": {
+      "ingredients": true,
+      "maxCalories": true,
+      "minProtein": false
+    }
+  },
+  {
+    "id": "meal-055",
+    "category": "distractor",
+    "input": "My partner had a 250-calorie snack. I want a lunch with tofu and at least 25g protein.",
+    "expected": {
+      "mealType": "lunch",
+      "ingredients": [
+        "tofu"
+      ],
+      "maxCalories": null,
+      "minProtein": 25
+    },
+    "actual": {
+      "ingredients": [
+        "tofu"
+      ],
+      "maxCalories": 250,
+      "minProtein": 25
+    },
+    "fields": {
+      "ingredients": true,
+      "maxCalories": false,
+      "minProtein": true
+    }
+  }
+]
